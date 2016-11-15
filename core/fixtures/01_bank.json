@@ -1,0 +1,132 @@
+[
+  {
+    "model": "core.bank",
+    "pk": 1,
+    "fields": {
+      "code": "santander",
+      "name": "Banco Santander",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },
+  {
+    "model": "core.bank",
+    "pk": 2,
+    "fields": {
+      "code": "galicia",
+      "name": "Banco Galicia",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },  
+  {
+    "model": "core.bank",
+    "pk": 3,
+    "fields": {
+      "code": "frances",
+      "name": "Banco Frances",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },  
+  {
+    "model": "core.bank",
+    "pk": 4,
+    "fields": {
+      "code": "hsbc",
+      "name": "Banco HSBC",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },  
+  {
+    "model": "core.bank",
+    "pk": 5,
+    "fields": {
+      "code": "itau",
+      "name": "Banco Itau",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },  
+  {
+    "model": "core.bank",
+    "pk": 6,
+    "fields": {
+      "code": "macro",
+      "name": "Banco Macro",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },    
+  {
+    "model": "core.bank",
+    "pk": 7,
+    "fields": {
+      "code": "credicoop",
+      "name": "Banco Credicoop",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },    
+  {
+    "model": "core.bank",
+    "pk": 8,
+    "fields": {
+      "code": "hipotecario",
+      "name": "Banco Hipotecario",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },    
+  {
+    "model": "core.bank",
+    "pk": 9,
+    "fields": {
+      "code": "provincia",
+      "name": "Banco Provincia",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },    
+  {
+    "model": "core.bank",
+    "pk": 10,
+    "fields": {
+      "code": "columbia",
+      "name": "Banco Columbia",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },    
+  {
+    "model": "core.bank",
+    "pk": 11,
+    "fields": {
+      "code": "ciudad",
+      "name": "Banco Ciudad",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  }, 
+  {
+    "model": "core.bank",
+    "pk": 12,
+    "fields": {
+      "code": "icbc",
+      "name": "Banco ICBC",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },     
+  {
+    "model": "core.bank",
+    "pk": 13,
+    "fields": {
+      "code": "corrientes",
+      "name": "Banco Corrientes",      
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  }  
+]  
