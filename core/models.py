@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.utils.crypto import get_random_string
+
 #from core.settings import UNIQUE_REFERENCE_LENGTH, REFERENCE_LOOKUP_ATTEMPTS
 
 # Create your models here.

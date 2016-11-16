@@ -20,4 +20,5 @@ import core.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', core.views.main, name='core.main'),
+    url(r'^order/ajax/$', core.views.ajax_order, name='core.ajax_order'),
 ]
