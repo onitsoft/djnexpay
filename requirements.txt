@@ -1,0 +1,4 @@
+Django==1.10.3
+django-bootstrap3==7.1.0
+django-safedelete==0.3.5
+django-softdelete==0.7.0

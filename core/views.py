@@ -3,7 +3,11 @@ from django.template.loader import get_template
 from django.http import HttpResponse, HttpResponseForbidden, JsonResponse
 from core.models import Bank, Order
 from core.forms import DateSearchForm, OrderForm
+from django.http import Http404
+
 # Create your views here.
+
+# TODO:
 
 
 def main(request):
@@ -33,7 +37,6 @@ def ajax_order(request):
 
         # TODO: This process can be moved to model
         comission = float(amount) * float(0.054) + float(0.3)
-        print(type(comission), type(amount))
         amount_net = ((float(amount) - comission) * EXCHANGE_RATE) * 0.85
 
         order = Order(
@@ -54,6 +57,7 @@ def ajax_order(request):
 
     else:
         _messages.append("Invalid Method")
+        raise Http404("Invalid Method")
 
     ctx = {'status': 'OK'}
 
