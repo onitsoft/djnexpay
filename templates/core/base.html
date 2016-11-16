@@ -3,8 +3,8 @@
 {% load staticfiles %}
 {% load i18n %}
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
 {% block css %}
@@ -21,7 +21,7 @@
     <title>Nexpay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Nexchange">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
     <!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
@@ -40,9 +40,7 @@
     <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="{% static 'images/icon.png'%}">
     <!--  -->
-    <link rel="stylesheet" href="{% static 'css/overrides_old.css' %}">
-    <link rel="stylesheet" href="{% static 'css/overrides.css' %}">
-    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
     <script type="text/javascript">
         // TODO: which is the best way to translate JS messages?
         var HTTP_500_MSG = "{% trans 'Service unavailable. Please try again later.' %}";
@@ -57,11 +55,9 @@
 </head>
 <body>
     <div class="container">
-
             {% block main %}
             {% endblock %}
-
-   
+   </div>
 
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
@@ -69,7 +65,5 @@
           crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/9a25f329b7.js"></script>    
     {% bootstrap_javascript %}
-    
-
 </body>
 </html>
