@@ -10,3 +10,9 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+ALLOWED_HOSTS = [
+    'nexpay.co',
+    'www.nexpay.co',
+    'api.nexpay.co'
+]
