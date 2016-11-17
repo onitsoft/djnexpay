@@ -1,4 +1,5 @@
 from djnexpay.settings_base import *
+import mimetypes
 
 
 DATABASES = {
@@ -20,3 +21,5 @@ ALLOWED_HOSTS = [
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+mimetypes.add_type("text/css", ".css", True)
