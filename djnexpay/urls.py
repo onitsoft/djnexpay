@@ -13,12 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
-import core.views
+from rest_framework.routers import DefaultRouter
+from core import views
+
+router = DefaultRouter()
+router.register(r'orders', views.OrderViewSet)
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', core.views.main, name='core.main'),
-    url(r'^order/ajax/$', core.views.ajax_order, name='core.ajax_order'),
+    url(r'^api/v1/', include(router.urls)),
+    #url(r'^$', core.views.main, name='core.main'),
+    #url(r'^order/ajax/$', core.views.ajax_order, name='core.ajax_order'),
 ]

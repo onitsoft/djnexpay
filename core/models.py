@@ -84,7 +84,7 @@ class Order(TimeStampedModel, SoftDeletableModel, UniqueFieldMixin):
     comission = models.DecimalField(max_digits=12, decimal_places=2)
     amount_net = models.DecimalField(max_digits=12, decimal_places=2)
     bank = models.ForeignKey(Bank)
-    cbu_number = models.CharField(max_length=20)
+    cbu_number = models.CharField(max_length=22)
     account_number = models.CharField(max_length=15)
     account_owner = models.CharField(max_length=20)
     account_owner_dni = models.CharField(max_length=12)
