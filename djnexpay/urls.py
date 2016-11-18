@@ -20,6 +20,7 @@ from core import views
 
 router = DefaultRouter()
 router.register(r'orders', views.OrderViewSet)
+router.register(r'parameters', views.ParameterViewSet)
 
 
 urlpatterns = [

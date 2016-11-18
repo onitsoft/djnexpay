@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import Order
+from core.models import Order, Parameter
 
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
@@ -35,3 +35,10 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
 
     def get_amount_net(self, obj):
         return obj.amount_net
+
+
+class ParameterSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Parameter
+        fields = '__all__'

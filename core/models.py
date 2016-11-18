@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.utils.crypto import get_random_string
 
-#from core.settings import UNIQUE_REFERENCE_LENGTH, REFERENCE_LOOKUP_ATTEMPTS
+# from core.settings import UNIQUE_REFERENCE_LENGTH, REFERENCE_LOOKUP_ATTEMPTS
 
 # Create your models here.
 
@@ -108,3 +108,14 @@ class Order(TimeStampedModel, SoftDeletableModel, UniqueFieldMixin):
             )
 
         super(Order, self).save(*args, **kwargs)
+
+
+class Parameter(TimeStampedModel, SoftDeletableModel, UniqueFieldMixin):
+    paypal_pct = models.DecimalField(max_digits=8, decimal_places=3)
+    paypal_fee = models.DecimalField(max_digits=8, decimal_places=3)
+    nexpay_pct = models.DecimalField(max_digits=8, decimal_places=3)
+    exchange_rate = models.DecimalField(max_digits=8, decimal_places=3)
+
+    class Meta:
+        ordering = ('-pk', )
+        get_latest_by = 'pk'

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "core.parameter",
+    "pk": 1,
+    "fields": {
+      "paypal_pct": 0.034,
+      "paypal_fee": 0.25,
+      "nexpay_pct": 0.92,
+      "exchange_rate": 14.50,
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  },
+  {
+    "model": "core.parameter",
+    "pk": 2,
+    "fields": {
+      "paypal_pct": 0.054,
+      "paypal_fee": 0.3,
+      "nexpay_pct": 0.95,
+      "exchange_rate": 15.00,
+      "created_on":"2016-05-20T17:41:28+00:00",
+      "modified_on":"2016-05-20T17:41:28+00:00"
+    }
+  }
+]
