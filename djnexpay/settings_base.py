@@ -33,7 +33,6 @@ STATIC_URL = '/static/'
 SECRET_KEY = 'a8$&dg&2a86+6#0ac3k$%f4-6ah4lj$el3b&^q756wy-ay^m_#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -83,15 +82,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'djnexpay.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
