@@ -16,9 +16,9 @@ from rest_framework import generics
 from core.models import Bank, Order, Parameter
 from core.serializers import OrderSerializer, ParameterSerializer
 # Create your views here.
+from decimal import Decimal
 
-
-EXCHANGE_RATE = float(15)
+from .custom_permissions import PostOnly
 
 
 @api_view(['GET'])
@@ -35,19 +35,21 @@ class OrderViewSet(viewsets.ModelViewSet):
     """
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    permission_classes = [PostOnly]
+
     #permission_classes = (permissions.IsAuthenticated,IsOwner,)
 
     def perform_create(self, serializer):
         bank_instance = Bank.objects.filter(code=self.request.data['bank'])[0]
         parameters = Parameter.objects.all()[0]
-        paypal_pct = float(parameters.paypal_pct)
-        paypal_fee = float(parameters.paypal_fee)
-        nexpay_pct = float(parameters.nexpay_pct)
-        exchange_rate = float(parameters.exchange_rate)
+        paypal_pct = Decimal(parameters.paypal_pct)
+        paypal_fee = Decimal(parameters.paypal_fee)
+        nexpay_pct = Decimal(parameters.nexpay_pct)
+        exchange_rate = Decimal(parameters.exchange_rate)
         amount = self.request.data['amount_gross']
-        comission = round(float(amount) * paypal_pct + paypal_fee, 2)
+        comission = round(Decimal(amount) * paypal_pct + paypal_fee, 2)
         amount_net = round(
-            ((float(amount) - comission) * exchange_rate) * nexpay_pct)
+            ((Decimal(amount) - comission) * exchange_rate) * nexpay_pct)
         serializer.save(
             bank=bank_instance,
             comission=comission,
