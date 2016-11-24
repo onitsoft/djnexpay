@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "code": "santander",
-      "name": "Banco Santander",      
+      "name": "Banco Santander",
       "created_on":"2016-05-20T17:41:28+00:00",
       "modified_on":"2016-05-20T17:41:28+00:00"
     }
@@ -14,21 +14,21 @@
     "pk": 2,
     "fields": {
       "code": "galicia",
-      "name": "Banco Galicia",      
+      "name": "Banco Galicia",
       "created_on":"2016-05-20T17:41:28+00:00",
       "modified_on":"2016-05-20T17:41:28+00:00"
     }
-  },  
+  },
   {
     "model": "core.bank",
     "pk": 3,
     "fields": {
       "code": "frances",
-      "name": "Banco Frances",      
+      "name": "Banco Frances",
       "created_on":"2016-05-20T17:41:28+00:00",
       "modified_on":"2016-05-20T17:41:28+00:00"
     }
-  },  
+  },
   {
     "model": "core.bank",
     "pk": 4,
